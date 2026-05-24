@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karanveer Sehra - Portfolio</title>
+    <style>
+        /* Basic clean styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #222;
+            background-color: #fafafa;
+            line-height: 1.5;
+        }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 5px; }
+        .subtitle { color: #666; margin-top: 0; margin-bottom: 40px; }
+        
+        /* The Project Container */
+        .project-section {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .project-title { font-size: 1.6rem; margin-top: 0; margin-bottom: 20px; color: #111; }
+
+        /* The 3-Column Grid Layout */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+        }
+        
+        /* Individual Columns */
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+        .column h4 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #0056b3; /* Clean engineering blue accent */
+        }
+        .column img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover; /* Keeps images beautifully cropped and uniform */
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            background-color: #f0f0f0;
+        }
+        .column p { margin: 0; font-size: 0.95rem; color: #444; }
+
+        /* Multi-image Sub-grid for Results */
+        .results-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .results-gallery img {
+            margin-bottom: 0; /* Override column margin for grid spacing */
+            height: 140px; /* Slightly shorter to look balanced side-by-side */
+        }
+
+        /* Responsive design for phones */
+        @media (max-width: 768px) {
+            .project-grid { grid-template-columns: 1fr; gap: 35px; }
+            .column img { height: auto; }
+            .results-gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Karanveer Sehra</h1>
+    <p class="subtitle">Sustainable Energy Engineering Student | Minor in Mathematics</p>
+
+    <div class="project-section">
+        <div class="project-title">Custom ESP32-S3 Development Board</div>
+        <div class="project-grid">
+            
+            <div class="column">
+                <h4>What? (The Beginning)</h4>
+                <img src="ESP32Schematic.png" alt="Schematic Phase">
+                <p>Designed a custom hardware development board centered around the ESP32-S3 ecosystem. The core objective was creating an optimized, multi-sheet schematic layout in Altium Designer to manage dual-stage voltage regulation and clean signal routing before starting physical design placement.</p>
+            </div>
+            
+            <div class="column">
+                <h4>How? (During)</h4>
+                <img src="ESP32FootPrint.png" alt="2D Routing Phase">
+                <p>Routed data paths and power rails utilizing a multi-layer stack-up strategy. Focused on trace optimizations—identifying errors like sharp 90-degree trace angles and tight ground returns to resolve them via strict design rule checks (DRC) for enhanced manufacturability.</p>
+            </div>
+            
+            <div class="column">
+                <h4>Results (The Final Product)</h4>
+                <img src="ESP32FinalDesign.png" alt="3D Final Layout">
+                <p>Produced a verified, production-ready 3D PCB layout architecture. The iteration cycle established an advanced engineering baseline for managing thermal relief constraints, footprint specifications, and high-frequency noise mitigation paths on localized hardware systems.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title">Run-of-River Hydroelectric System Design</div>
+        <div class="project-grid">
+            
+            <div class="column">
+                <h4>What? (The Beginning)</h4>
+                <img src="MapLayout.png" alt="Hydro Project Concept">
+                <p>Architected a 100 kW dual-stage run-of-river hydroelectric asset design. The primary goal was to match generation technology with dynamic environmental constraints while enforcing a strict 10% seasonal stream diversion safety cap.</p>
+            </div>
+            
+            <div class="column">
+                <h4>How? (During)</h4>
+                <img src="P&ID.png" alt="P&ID Diagram">
+                <p>Developed a full Piping and Instrumentation Diagram (P&ID) to organize system controls. Executed fluid mechanical sizing math in Excel using the Haaland equation to balance major/minor head losses against piping diameter expenses (0.15m steel / 0.25m PVC).</p>
+            </div>
+            
+            <div class="column">
+                <h4>Results (The Final Product)</h4>
+                <img src="FinalOptimization.png" alt="Final Hydro Optimization Chart">
+                <p>Optimized a dual-turbine system configuration—pairing an 89% efficient Pelton impulse runner and a Kaplan reaction turbine. Achieved a highly continuous 100.6 kW steady-state output with automated inline pressure safety loops to prevent water hammer failures.</p>
+            </div>
+
+        </div>
+    </div>
+
+<div class="project-section">
+        <div class="project-title">Wind Turbine Design</div>
+        <div class="project-grid">
+            
+            <div class="column">
+                <h4>What? (The Beginning)</h4>
+                <img src="TurbineDrawing.png" alt="Hydro Project Concept">
+                <p>Designed and prototyped a small-scale wind turbine generation and power conditioning system. The primary focus was optimizing aerodynamic efficiency using Blade Element Momentum (BEM) theory and Tip Speed Ratio (TSR) analysis to calculate the ideal blade geometries and operational pitch angles for maximum energy capture.</p>
+            </div>
+            
+            <div class="column">
+                <h4>How? (During)</h4>
+                <img src="SolidworksTurbine.png" alt="P&ID Diagram">
+                <p>Modeled the high-efficiency turbine blade profiles within SolidWorks and translated the digital assemblies into physical prototypes using PLA 3D printing. Engineered the power conditioning subsystem by integrating a DC–DC boost converter to step up the low-voltage, variable output into a stable, usable electrical profile.</p>
+            </div>
+            
+            <div class="column">
+                <h4>Results (The Final Product)</h4>
+                <img src="FinalTurbine.png" alt="Final Hydro Optimization Chart">
+                <p>Fabricated and successfully tested a fully operational wind turbine assembly capable of reliable aerodynamic performance. Validated the experimental design under active loading, successfully measuring data acquisition paths and demonstrating practical low-voltage power regulation for local storage or load applications.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title">Mechanical Simulation Rig Design</div>
+        <div class="project-grid">
+            
+            <div class="column">
+                <h4>What? (The Beginning)</h4>
+                <img src="SolidworksSeat.png" alt="Initial Solidworks Model">
+                <p>Designed and modeled a structural chassis for a high-fidelity mechanical simulation rig. Focused on ergonomics, structural integrity, and component placement to ensure realistic spatial boundaries and robust driver geometry in CAD environments.</p>
+            </div>
+            
+            <div class="column">
+                <h4>How? (During)</h4>
+                <img src="IncompleteSeat.png" alt="Initial Construction of Design">
+                <p>Translated digital CAD files into physical assemblies. Managed material sourcing, hardware optimization, and close-tolerance test fits to ensure the physical framework accurately reflected the modeled design constraints.</p>
+            </div>
+            
+            <div class="column">
+                <h4>Results (The Final Product)</h4>
+                <div class="results-gallery">
+                    <img src="SimRig1.png" alt="Final Assembly View 1">
+                    <img src="SimRig2.png" alt="Final Assembly View 2">
+                    <img src="SimRig3.png" alt="Final Assembly View 3">
+                </div>
+                <p>Successfully fabricated and evaluated the operational simulation rig. The completed physical hardware validated structural stress points under loading, offering an immersive, durable platform engineered to handle continuous dynamic forces.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
